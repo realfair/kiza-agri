@@ -1,0 +1,1 @@
+					<a class="close" action="<?php echo $value['commentId']; ?>" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></a>

@@ -1,0 +1,17 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+# Rewrite for login.php
+RewriteRule ^login$ system_access.php [NC,L]
+RewriteRule ^login_user$ views/access/user_login.php [NC,L]
+RewriteRule ^dashboard$ datatable.php [NC,L]
+RewriteRule ^coop_view$ view_cooperative.php [NC,L]
+RewriteRule ^crops_all$ system_crops.php [NC,L]
+RewriteRule ^fertilizers_all$ system_fertilizers.php [NC,L]
+RewriteRule ^pesticide_all$ system_pesticides.php [NC,L]
+RewriteRule ^users$ manage_admins.php [NC,L]
+RewriteRule ^logout$ logoff_system.php [NC,L]
+RewriteRule ^coop_conversation$ message_chat.php [NC,L]
+
+RewriteRule ^save_system_crop$ views/admin/modals/scripts/save_crop.php [NC,L]
+RewriteRule ^save_system_data$ views/admin/modals/scripts/save_data.php [NC,L]
+RewriteRule ^crop_grades$ views/admin/modals/scripts/crop_grades.php [NC,L]

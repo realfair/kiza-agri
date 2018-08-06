@@ -1,0 +1,70 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+# Rewrite for members
+RewriteRule ^members$ coo_members.php [NC,L]
+RewriteRule ^dashboard$ index.php [NC,L]
+RewriteRule ^logout$ logoff_system.php [NC,L]
+# Rewrite for access system
+RewriteRule ^login$ access_system.php [NC,L]
+
+#load province districts
+RewriteRule ^load_districts$ save/province_districts.php [NC,L]
+RewriteRule ^register_cooperative$ save/register_cooperative.php [NC,L]
+RewriteRule ^cooperative_login$ save/login_cooperative.php [NC,L]
+
+#finish account set up
+RewriteRule ^finish_setup$ finish_account_setting.php [NC,L]
+RewriteRule ^save_setup$ save/finish_account.php [NC,L]
+
+#coo members
+RewriteRule ^save_member$ coo_members/save_member.php [NC,L]
+
+
+#coo crops
+RewriteRule ^crops$ coo_crops.php [NC,L]
+RewriteRule ^crop_grades$ coo_crops/load_crop_grades.php [NC,L]
+RewriteRule ^save_crop$ coo_crops/save_crop.php [NC,L]
+
+#coo pricing
+RewriteRule ^pricing$ coo_pricing.php [NC,L]
+RewriteRule ^cooperative_crop_grade$ coo_pricing/cooperative_crop_grade.php [NC,L]
+RewriteRule ^grade_varieties$ coo_pricing/grade_varieties.php [NC,L]
+RewriteRule ^save_pricing$ coo_pricing/save_pricing.php [NC,L]
+
+#coo harvest
+RewriteRule ^harvest$ coo_harvest.php [NC,L]
+RewriteRule ^save_harvest$ coo_harvest/save_harvest.php [NC,L]
+
+#coo selling
+RewriteRule ^sellings$ coo_selling.php [NC,L]
+RewriteRule ^selling_harvest$ views/ordering/selling.php [NC,L]
+
+#coo ordering
+RewriteRule ^ordering$ coo_ordering.php [NC,L]
+
+
+
+########## COO LAND 
+RewriteRule ^land$ coo_land.php [NC,L]
+RewriteRule ^save_land$ coo_land/save_land.php [NC,L]
+
+######### COO FERTILIZERS ####
+RewriteRule ^fertilizers$ coo_fertilizers.php [NC,L]
+RewriteRule ^save_fertilizer$ coo_fertilizers/save_fertilizer.php [NC,L]
+RewriteRule ^member-fertilizers$ view_fertilizer.php [NC,L]
+RewriteRule ^give_fertilizer$ view_fertilizer/give_fertilizer.php [NC,L]
+RewriteRule ^give_pesticide$ views/pesticides/give_pesticide.php [NC,L]
+
+### HARVEST GRADE AND VAREITY
+RewriteRule ^harvest_grades$ harvest_grade.php [NC,L]
+RewriteRule ^variety_grade$ grade_variety.php [NC,L]
+
+# COO PESTICIDES
+RewriteRule ^pesticides$ coo_pesticides.php [NC,L]
+RewriteRule ^save_pesticide$ views/pesticides/save_pesticides.php [NC,L]
+RewriteRule ^member-pesticides$ view_pesticide.php [NC,L]
+
+# COO COMMUNICATION
+RewriteRule ^communication$ coo_communication.php [NC,L]
+RewriteRule ^conversation$ view_conversation.php [NC,L]
+RewriteRule ^save_comment$ views/communication/save_data.php [NC,L]
